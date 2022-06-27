@@ -156,7 +156,7 @@ export class Home extends Component {
     const styleM3= { background:'#fff url("https://goomtaxiuser.herokuapp.com/public/assets/images/slider3.jpg") no-repeat fixed left', backgroundSize:'contain', height:"100%",position:"fixed"};  
     const styleM4= { background:'#fff url("https://goomtaxiuser.herokuapp.com/public/assets/images/4.jpg") no-repeat fixed left', backgroundSize:'contain', height:"100%",position:"fixed"};  
     const styleM5= { background:'#fff url("https://goomtaxiuser.herokuapp.com/public/assets/images/slider5.jpg") no-repeat fixed left', backgroundSize:'contain', height:"100%",position:"fixed"};  
-    const styleY ={padding:"43% 0px" }
+    const styleY ={padding:"43% 0px",background:'#fff url("https://goomtaxiuser.herokuapp.com/public/assets/images/slider5.jpg") no-repeat fixed left', backgroundSize:'contain', height:"100%",position:"fixed" }
     return (
        <React.Fragment>
 
@@ -210,12 +210,12 @@ export class Home extends Component {
 
           <h1 className="text-custom m-t-40 m-b-20 text-left pull-left" style={{fontWeight:'300', letterSpacing:"3px", color: "rgb(126, 87, 194)"}}>Sign in</h1>
              
-                 <a href={facebookLoginUrl}>
+          {/*       <a href={facebookLoginUrl}>
     Login with Facebook
   </a> 
 
    <a href={googleLoginUrl}>Login with Google</a> 
-               
+            */}   
         </div>
 
                       <div className="panel-body">
