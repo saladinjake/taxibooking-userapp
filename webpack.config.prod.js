@@ -13,9 +13,9 @@ module.exports = merge(common, {
   new Dotenv(),
     new webpack.DefinePlugin({
       'process.env': {  
-        API_URL: JSON.stringify('https://goomtaxibackendapi/api/v1'),
+        API_URL: JSON.stringify('https://goomtaxibackendapi.herokuapp.com/api/v1'),
         DEPLOY_FRONT_URL: JSON.stringify('https://goomtaxiuser.herokuapp.com'),
-        DEPLOY_BACK_URL: JSON.stringify('https://goomtaxibackendapi/api/v1'),
+        DEPLOY_BACK_URL: JSON.stringify('https://goomtaxibackendapi.herokuapp.com/api/v1'),
       }
     }),
     new OptimizeCSSAssetsPlugin({})
