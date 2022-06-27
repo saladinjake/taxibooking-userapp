@@ -151,11 +151,11 @@ export class Home extends Component {
   
   }
   render() {
-    const styleM= { background:'#fff url("public/assets/images/banner-home.jpg") no-repeat fixed left', backgroundSize:'contain', height:"100%",position:"fixed"};  
-    const styleM2= { background:'#fff url("public/assets/images/slider2.jpg") no-repeat fixed left', backgroundSize:'contain', height:"100%",position:"fixed"};  
-    const styleM3= { background:'#fff url("public/assets/images/slider3.jpg") no-repeat fixed left', backgroundSize:'contain', height:"100%",position:"fixed"};  
-    const styleM4= { background:'#fff url("public/assets/images/4.jpg") no-repeat fixed left', backgroundSize:'contain', height:"100%",position:"fixed"};  
-    const styleM5= { background:'#fff url("public/assets/images/slider5.jpg") no-repeat fixed left', backgroundSize:'contain', height:"100%",position:"fixed"};  
+    const styleM= { background:'#fff url("https://goomtaxiuser.herokuapp.com/public/assets/images/banner-home.jpg") no-repeat fixed left', backgroundSize:'contain', height:"100%",position:"fixed"};  
+    const styleM2= { background:'#fff url("https://goomtaxiuser.herokuapp.com/public/assets/images/slider2.jpg") no-repeat fixed left', backgroundSize:'contain', height:"100%",position:"fixed"};  
+    const styleM3= { background:'#fff url("https://goomtaxiuser.herokuapp.com/public/assets/images/slider3.jpg") no-repeat fixed left', backgroundSize:'contain', height:"100%",position:"fixed"};  
+    const styleM4= { background:'#fff url("https://goomtaxiuser.herokuapp.com/public/assets/images/4.jpg") no-repeat fixed left', backgroundSize:'contain', height:"100%",position:"fixed"};  
+    const styleM5= { background:'#fff url("https://goomtaxiuser.herokuapp.com/public/assets/images/slider5.jpg") no-repeat fixed left', backgroundSize:'contain', height:"100%",position:"fixed"};  
     const styleY ={padding:"43% 0px" }
     return (
        <React.Fragment>
@@ -204,8 +204,8 @@ export class Home extends Component {
                 <div className="card-box animated animatedFadeInUp fadeInUp ">
                       <div className="panel-heading">
                       <a href="index.html" class="logo pull-right">
-                        <i class="icon-c-logo"> <img src="./public/assets/images/goomlogo.png" /> </i>
-                        <span><img src="./public/assets/images/goomlogo.png" /></span>
+                        <i class="icon-c-logo"> <img src="https://goomtaxiuser.herokuapp.com/public/assets/images/goomlogo.png" /> </i>
+                        <span><img src="https://goomtaxiuser.herokuapp.com/public/assets/images/goomlogo.png" /></span>
                       </a>
 
           <h1 className="text-custom m-t-40 m-b-20 text-left pull-left" style={{fontWeight:'300', letterSpacing:"3px", color: "rgb(126, 87, 194)"}}>Sign in</h1>
