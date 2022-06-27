@@ -12,8 +12,6 @@ import $ from 'jquery';
 
 import GoomTaxiServiceRoutes from "./enterprise-version/core/routes/index"
 
-
-
 class App extends React.Component{
   constructor(props){
     super(props)
@@ -92,9 +90,6 @@ $(document).ready(function(){
 
 
  document.addEventListener('DOMContentLoaded',()=>{
-
- 
-
    loadingAction()
  })
     

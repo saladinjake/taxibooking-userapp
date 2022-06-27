@@ -6,7 +6,7 @@ import getApiUrl from '../../backend/services/apiservices/helpers/getOnlineUrlCo
 let baseUrl =  getApiUrl();
 
 import socketIOClient from "socket.io-client";
-const ENDPOINT = "https://goomtaxibackendapi";
+const ENDPOINT = "https://goomtaxibackendapi.herokuapp.com";
 
 window.viewRecordDriverUserItinsDetail =(el) =>{
     

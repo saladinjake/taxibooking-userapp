@@ -169,8 +169,8 @@ class FrontEndApp {
       //get user balance and users notification
       window.onload= function(){
 
-        const urls = ["https://goomtaxibackendapi/api/v1"+"/balance/"+ user.user.email,
-                      "https://goomtaxibackendapi/v1"+"/notification/"+ user.user.email
+        const urls = ["https://goomtaxibackendapi.herokuapp.com/api/v1"+"/balance/"+ user.user.email,
+                      "https://goomtaxibackendapi.herokuapp.com/v1"+"/notification/"+ user.user.email
                       ];
     //console.log('Token:  ' + ApiGetBothRecord.getLoggedInUser().token);
         const promises = urls.map(url =>
@@ -276,7 +276,7 @@ window.updateNotificationStatus = (el) =>{
 
 
   const user = JSON.parse(localStorage.getItem("userToken"));
-  let url = "https://goomtaxibackendapi/api/v1"+"/notification/"+ el.dataset.id
+  let url = "https://goomtaxibackendapi.herokuapp.com/api/v1"+"/notification/"+ el.dataset.id
 
   let dataStatus = {
     status:"old",

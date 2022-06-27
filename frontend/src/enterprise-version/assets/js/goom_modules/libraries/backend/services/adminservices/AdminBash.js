@@ -34,7 +34,7 @@ alertify.set('notifier','position', 'bottom-right');
 
 
 import socketIOClient from "socket.io-client";
-const ENDPOINT = "https://goomtaxibackendapi";
+const ENDPOINT = "https://goomtaxibackendapi.herokuapp.com";
 
 export default class AdminBash{
   static runEndpoints(){
@@ -485,7 +485,7 @@ let markers = new Map()
 
    let  socket = socketIOClient(
       // ENDPOINT,
-     "https://goomtaxibackendapi",
+     "https://goomtaxibackendapi.herokuapp.com",
 
       // {secure: true}
         {
