@@ -165,10 +165,10 @@ export class Home extends Component {
   
     
                   
-{/*static file*/}
-              {/* <div style={styleY} ></div> */}
 
-{/*slide shw*/}
+               <div style={styleY} ></div> 
+
+{/*slide shw
 
 <div id="slider">
 	<div id="line">
@@ -192,7 +192,7 @@ export class Home extends Component {
 	</div>
 	
 </div>
-
+*/}
             </div>
 
             
@@ -203,18 +203,18 @@ export class Home extends Component {
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 pull-right" >
                 <div className="card-box animated animatedFadeInUp fadeInUp ">
                       <div className="panel-heading">
-                      <a href="index.html" class="logo pull-right">
+                      <a href="/" class="logo pull-right">
                         <i class="icon-c-logo"> <img src="https://goomtaxiuser.herokuapp.com/public/assets/images/goomlogo.png" /> </i>
                         <span><img src="https://goomtaxiuser.herokuapp.com/public/assets/images/goomlogo.png" /></span>
                       </a>
 
           <h1 className="text-custom m-t-40 m-b-20 text-left pull-left" style={{fontWeight:'300', letterSpacing:"3px", color: "rgb(126, 87, 194)"}}>Sign in</h1>
              
-                {/* <a href={facebookLoginUrl}>
+                 <a href={facebookLoginUrl}>
     Login with Facebook
-  </a> */}
+  </a> 
 
-  {/* <a href={googleLoginUrl}>Login with Google</a> */}
+   <a href={googleLoginUrl}>Login with Google</a> 
                
         </div>
 
