@@ -62,7 +62,7 @@
     "heroku-postbuild": "npm run build",
     "lint": "eslint source/ --quiet",
     "lint:write": "eslint --debug . --fix",
-    "prettier": "prettier --write frontend/**/*.js",
+    "prettier": "prettier --write frontend/**/*.jsx",
     "start:server":"babel-node --presets=@babel/preset-env server.js",
     "start-react": "node server_react.js",
     "webpack": "webpack --config ./webpack.config.prod.js",
