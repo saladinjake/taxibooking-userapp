@@ -12,7 +12,7 @@ import { connect } from 'react-redux';
 //facebook
 let client_id = "1438251769712975";
 let client_sec = "93b9f3a55a6dd95b15643e3745cc65fb"
-let redirect_uri = 'https://demouserapp.Goom Logistics.ng/api/v1/auth/facebook/callback/';
+let redirect_uri = 'https://goomtaxibackendapi.herokuapp.com/api/v1/auth/facebook/callback/';
 
 import * as queryString from 'query-string';
 
@@ -37,179 +37,31 @@ const facebookLoginUrl = `https://www.facebook.com/v4.0/dialog/oauth?${stringifi
 
 
 export class Home extends Component {
-
-  componentDidMount(){
-   
-
-      let slider = document.querySelector('#slider');
-      let move = document.querySelector('#move');
-      let moveLi = Array.from(document.querySelectorAll('#slider #move li'));
-      let forword = document.querySelector('#slider #forword');
-      let back = document.querySelector('#slider #back');
-      let counter = 1;
-      let time = 3000;
-      let line = document.querySelector('#slider #line');
-      let dots = document.querySelector('#slider #dots');
-      let dot;
-  
-      for (let i = 0; i < moveLi.length; i++) {
-  
-          dot = document.createElement('li');
-          dots.appendChild(dot);
-          dot.value = i;
-      }
-  
-      dot = dots.getElementsByTagName('li');
-  
-      line.style.animation = 'line ' + (time / 1000) + 's linear infinite';
-      dot[0].classList.add('active');
-  
-      function moveUP() {
-  
-          if (counter == moveLi.length) {
-  
-              moveLi[0].style.marginLeft = '0%';
-              counter = 1;
-  
-          } else if (counter >= 1) {
-  
-              moveLi[0].style.marginLeft = '-' + counter * 100 + '%';
-              counter++;
-          } 
-  
-          if (counter == 1) {
-  
-              dot[moveLi.length - 1].classList.remove('active');
-              dot[0].classList.add('active');
-  
-          } else if (counter > 1) {
-  
-              dot[counter - 2].classList.remove('active');
-              dot[counter - 1].classList.add('active');
-  
-          }
-  
-      }
-  
-      function moveDOWN() {
-  
-          if (counter == 1) {
-  
-              moveLi[0].style.marginLeft = '-' + (moveLi.length - 1) * 100 + '%';
-              counter = moveLi.length;
-              dot[0].classList.remove('active');
-              dot[moveLi.length - 1].classList.add('active');
-  
-          } else if (counter <= moveLi.length) {
-  
-              counter = counter - 2;
-              moveLi[0].style.marginLeft = '-' + counter * 100 + '%';   
-              counter++;
-  
-              dot[counter].classList.remove('active');
-              dot[counter - 1].classList.add('active');
-  
-          }  
-  
-      }
-  
-      for (let i = 0; i < dot.length; i++) {
-  
-          dot[i].addEventListener('click', function(e) {
-  
-              dot[counter - 1].classList.remove('active');
-              counter = e.target.value + 1;
-              dot[e.target.value].classList.add('active');
-              moveLi[0].style.marginLeft = '-' + (counter - 1) * 100 + '%';
-  
-          });
-  
-      }
-  
-      forword.onclick = moveUP;
-      back.onclick = moveDOWN;
-  
-      let autoPlay = setInterval(moveUP, time);
-  
-      slider.onmouseover = function() {
-  
-          autoPlay = clearInterval(autoPlay);
-          line.style.animation = '';
-  
-      }
-  
-      slider.onmouseout = function() {
-  
-          autoPlay = setInterval(moveUP, time);
-          line.style.animation = 'line ' + (time / 1000) + 's linear infinite';
-  
-      }
-    
-  
-  
-  
-  
-  }
   render() {
     const styleM= { background:'#fff url("https://goomtaxiuser.herokuapp.com/public/assets/images/banner-home.jpg") no-repeat fixed left', backgroundSize:'contain', height:"100%",position:"fixed"};  
-    const styleM2= { background:'#fff url("https://goomtaxiuser.herokuapp.com/public/assets/images/slider2.jpg") no-repeat fixed left', backgroundSize:'contain', height:"100%",position:"fixed"};  
-    const styleM3= { background:'#fff url("https://goomtaxiuser.herokuapp.com/public/assets/images/slider3.jpg") no-repeat fixed left', backgroundSize:'contain', height:"100%",position:"fixed"};  
-    const styleM4= { background:'#fff url("https://goomtaxiuser.herokuapp.com/public/assets/images/4.jpg") no-repeat fixed left', backgroundSize:'contain', height:"100%",position:"fixed"};  
-    const styleM5= { background:'#fff url("https://goomtaxiuser.herokuapp.com/public/assets/images/slider5.jpg") no-repeat fixed left', backgroundSize:'contain', height:"100%",position:"fixed"};  
     const styleY ={padding:"43% 0px" }
     return (
        <React.Fragment>
 
-            <div id="loginpage" className="col-lg-8 col-md-6 hidden-md-down hidden-xs hidden-sm "   >
+            <div id="main-content" className="col-lg-8 col-md-6 hidden-md-down hidden-xs hidden-sm "  id="loginpage" style={styleM}>
 
   
     
-                  
-{/*static file*/}
-              {/* <div style={styleY} ></div> */}
 
-{/*slide shw*/}
 
-<div id="slider">
-	<div id="line">
-
-	</div>
-
-	<ul id="move">
-		<li style={styleM}></li>
-		<li style={styleM2}></li>
-		<li style={styleM3}></li>
-		<li style={styleM4}></li>
-	</ul>
-	<div id="back">
-		Backward
-	</div>
-	<div id="forword">
-		Forward
-	</div>
-	<div id="dots">
-		
-	</div>
-	
-</div>
-
+              <div style={styleY} ></div>
             </div>
 
             
 
 
-    
+            
           
             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 pull-right" >
                 <div className="card-box animated animatedFadeInUp fadeInUp ">
                       <div className="panel-heading">
-                      <a href="index.html" class="logo pull-right">
-                        <i class="icon-c-logo"> <img src="https://goomtaxiuser.herokuapp.com/public/assets/images/goomlogo.png" /> </i>
-                        <span><img src="https://goomtaxiuser.herokuapp.com/public/assets/images/goomlogo.png" /></span>
-                      </a>
-
-          <h1 className="text-custom m-t-40 m-b-20 text-left pull-left" style={{fontWeight:'300', letterSpacing:"3px", color: "rgb(126, 87, 194)"}}>Sign in</h1>
-             
+          <h1 className="text-custom m-t-40 m-b-20 text-left" style={{fontWeight:'700', letterSpacing:"3px", color: "rgb(126, 87, 194)"}}>Sign in</h1>
+                <a href="https://goomtaxiuser.herokuapp.com/signup" className="btn-link" style={{textDecoration:"none"}}>or create an account</a>
                 {/* <a href={facebookLoginUrl}>
     Login with Facebook
   </a> */}
@@ -289,11 +141,11 @@ export class Home extends Component {
                                                 
                                                   </a>
 
-                                                   <a style={{width:"60px",marginRight:"5px", height:"40px"}} href="https://demouserapp.Goom Logistics.ng:12000/api/v1/auth/instagram/" className="">
+                                                   <a style={{width:"60px",marginRight:"5px", height:"40px"}} href="https://demouserapp.commute.ng:12000/api/v1/auth/instagram/" className="">
                                                     <img style={{width:"30px",height:"30px"}} src="public/assets/images/instagram.png"  />
                                                   </a>
 
-                                                  <a style={{width:"60px",marginRight:"5px", height:"40px"}}   href="https://demouserapp.Goom Logistics.ng:12000/api/v1/auth/facebook/" className="">
+                                                  <a style={{width:"60px",marginRight:"5px", height:"40px"}}   href="https://demouserapp.commute.ng:12000/api/v1/auth/facebook/" className="">
                                                     <img style={{width:"25px",height:"25px"}} src="public/assets/images/facebook2.png"  />
                                                   </a> */}
                                     </div>
