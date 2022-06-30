@@ -26,7 +26,6 @@ import ApiUpdateStatusRecord from './apiservices/ApiUpdateStatusRecord';
 import ApiGetBothRecord from './apiservices/ApiGetBothRecord'; //for admin
 import ApiAllUsersRecords from './apiservices/ApiAllUsersRecords';
 
-import ApiDriversTasks from './apiservices/ApiDriversTasks';
 
 var cache = {};
 function onlyAllowOneCall(fn) {
@@ -43,9 +42,6 @@ function onlyAllowOneCall(fn) {
 class ApiBotService {
   constructor() {}
 
-  static getAssignedCarsAndTrips() {
-    return ApiDriversTasks.getAssignedCarsAndTrips();
-  }
   static dashboard() {
     return ApiDashboard();
   }
