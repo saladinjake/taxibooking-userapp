@@ -173,11 +173,7 @@ class ApiBotService {
     return Math.floor(Math.random() * 9000 + 2000);
   }
 
-  //ADMIN
-
-  static runAllGetRecords() {
-    return ApiAdminBotService.runAllGetRecords();
-  }
+  
 }
 
 export default ApiBotService;
