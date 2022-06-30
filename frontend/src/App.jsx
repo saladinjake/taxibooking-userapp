@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Header from './enterprise-version/views/User/Header/Header';
 import Footer from './enterprise-version/views/User/Footer/Footer';
 import FrontEndApp from './enterprise-version/assets/js/goom_modules/libraries/App';
-import BackendApp from './enterprise-version/assets/js/goom_modules/libraries/backend/App';
+
 import '../../public/css/mainstyles.css';
 import './App.css';
 import $ from 'jquery';
@@ -16,7 +16,11 @@ const loadingAction = () => {
   document.onreadystatechange = function(e) {
     e.preventDefault();
     if (document.readyState !== 'complete') {
+      document.querySelector('body').style.visibility = 'hidden';
+           
     } else {
+      document.querySelector('body').style.visibility = 'visible';
+   
       //if (!document.getElementById('admin')) {
         new FrontEndApp().run();
       //} else {
